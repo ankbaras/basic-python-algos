@@ -11,7 +11,7 @@ def loadfile():
 
 def findpeak(seq, startind, finind, n):
     mid = (startind + finind)//2
-    print(startind, mid, finind)
+    # print(startind, mid, finind)
     if (mid == 0) | ((seq[mid-1] <= seq[mid]) & (seq[mid] >= seq[mid+1])) | (mid == n):
         return mid
     elif (mid > 0) & (seq[mid-1] >= seq[mid]):
@@ -21,7 +21,7 @@ def findpeak(seq, startind, finind, n):
 
 seq_test = loadfile()
 
-n = len(seq_test)
-print(n)
+# n = len(seq_test)
+# print(n)
 print(seq_test)
 print(findpeak(seq_test, 0, n-1, n))
